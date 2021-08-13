@@ -74,3 +74,11 @@ select *
 from ex1_salgrade
 where length(act_no) <=13;
 ```
+
+## 특정 문자가 포함된 데이터 조회(SELECT)
+- ex) 사원이름에 'A'가 포함된 사원의 사원이름을 출력하시오.
+```
+select ename
+from ex1_emp
+where ename like '%A%';
+```
