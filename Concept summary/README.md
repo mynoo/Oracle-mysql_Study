@@ -66,3 +66,11 @@ SELECT 8001
   FROM emp a
  WHERE empno = 7698
 ```
+
+## 글자or숫자 길이에 따른 조회(SELECT)
+- ex) 계좌번호가 13자리 이하인 대상의 급여테이블 정보를 출력하시오.
+```
+select *
+from ex1_salgrade
+where length(act_no) <=13;
+```
