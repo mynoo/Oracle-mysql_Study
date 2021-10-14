@@ -9,6 +9,10 @@
   - pring Tools 3 Add-On for Spring Tools 4 3.9.14(Spring framework 설치)
 ---
 
+<div align="center">
+<h1>ORACLE</h1>
+</div>
+
 ## DB에서의 데이터 암호화 - ex)주민번호, 비밀번호...
 #### <암호화>
 ```
@@ -82,3 +86,11 @@ select ename
 from ex1_emp
 where ename like '%A%';
 ```
+
+
+<div align="center">
+<h1>MySQL</h1>
+</div>
+
+### <> -> !=(같지않다)
+
