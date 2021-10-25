@@ -71,6 +71,30 @@ SELECT 8001
  WHERE empno = 7698
 ```
 
+## 스칼라 서브쿼리
+- SELECT 절에 사용하는 서브쿼리로써 단순한 JOIN을 대체할 목적으로 사용되는 경우가 많다.
+다만 풀 스캔 등을 유발하는 등 JOIN에 비해서 알고리즘적 성능면에서 다소 떨어지기 때문에 JOIN을
+할 수 있는 경우는 JOIN을 하는게 좋다.
+
+- 또한 서브쿼리의 조건에 따라 반드시 하나의 값을 출력하게 되며(단 한개의 행을 출력한다는 의미가 아님),
+만약에 서브 쿼리의 결과 데이터가 없을 경우 NULL값을 리턴한다. OUTERJOIN과 다소 비슷한 역할을 한다.
+```
+SELECT ename
+        ,(SELECT dname
+         FROM dept d
+         WHERE d.deptno = e.deptno) dname
+        ,job
+FROM emp e
+WHERE job = 'MANAGER';
+===========================================================================================
+ENAME    DNAME        JOB
+JONES    RESEARCH     MANAGER
+BLAKE    SALES        MANAGER
+CLARK    ACCOUNTING   MANAGER
+```
+
+
+
 ## 글자or숫자 길이에 따른 조회(SELECT)
 - ex) 계좌번호가 13자리 이하인 대상의 급여테이블 정보를 출력하시오.
 ```
